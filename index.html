@@ -8,44 +8,45 @@
 </head>
 <body>
     <div class = "container">
-        <div class="display" id="display">
-            <div class="text">
-                10000
+        <div class="screen">
+            <div class="display">
+                
             </div>
 
         </div>
         <div class="buttons" id="buttons">
             <div class="row1">
-                <button class = "num">AC</button>
-                <button class = "num">+/-</button>
-                <button class = "num">%</button>
-                <button class = "spec">÷</button>
+                <button class = "num" onclick = "clearDisplay()"">AC</button>
+                <button class = "num" onclick="makeNegative()">+/-</button>
+                <button class = "num" onclick="appendToDisplay('%')">%</button>
+                <button class = "spec" onclick="appendToDisplay('/')">÷</button>
             </div>
             <div class="row2">
-                <button class = "num">7</button>
-                <button class = "num">8</button>
-                <button class = "num">9</button>
-                <button class = "spec">x</button>
+                <button class = "num" onclick="appendToDisplay('7')">7</button>
+                <button class = "num" onclick="appendToDisplay('8')">8</button>
+                <button class = "num" onclick="appendToDisplay('9')">9</button>
+                <button class = "spec" onclick="appendToDisplay('x')">x</button>
             </div>
             <div class="row3">
-                <button class = "num">4</button>
-                <button class = "num">5</button>
-                <button class = "num">6</button>
-                <button class = "spec">-</button>
+                <button class = "num" onclick="appendToDisplay('4')">4</button>
+                <button class = "num" onclick="appendToDisplay('5')">5</button>
+                <button class = "num" onclick="appendToDisplay('6')">6</button>
+                <button class = "spec" onclick="appendToDisplay('-')">-</button>
             </div>
             <div class="row4">
-                <button class = "num">1</button>
-                <button class = "num">2</button>
-                <button class = "num">3</button>
-                <button class = "spec">+</button>
+                <button class = "num" onclick="appendToDisplay('1')">1</button>
+                <button class = "num" onclick="appendToDisplay('2')">2</button>
+                <button class = "num" onclick="appendToDisplay('3')">3</button>
+                <button class = "spec" onclick="appendToDisplay('+')">+</button>
             </div>
             <div class="row5">    
-                <button class = "num" id="zero">0</button>
-                <button class = "num">.</button>
-                <button class = "spec">=</button>
+                <button class = "num" id="zero" onclick="appendToDisplay('0')">0</button>
+                <button class = "num" onclick="appendToDisplay('.')">.</button>
+                <button class = "spec" onclick="calculate('')">=</button>
             </div>
 
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
