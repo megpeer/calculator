@@ -10,35 +10,35 @@
     <div class = "container">
         <div class="screen"><input type=text name="display" id="display" disabled></div>
 
-        <div class="buttons" id="buttons">
+        <div >
             <div class="row1">
-                <div><input type = "button" class = "num" id = "zero" name = "AC" value = "AC" onclick = "clearDisplay()"></div>
-                <div><input type = "button" class = "num" name = "del" value = "delete" onclick="delete()"></div>
-                <div><input type = "button" class = "spec" name= "divide" value= "/"></div>
+                <div><input type = "button" class = "num2" id = "zero" value = "AC" onclick = "clearDisplay()"></div>
+                <div><input type = "button" class = "num2" name = "del" value = "delete" onclick="del()"></div>
+                <div><input type = "button" class = "spec" name= "divide" value= "/" onclick="getOp('/')"></div>
             </div>
             <div class="row2">
 
-                <div><input type="button" class = "num" name="seven" value="7"></div>
-                <div><input type="button" class = "num" name="eight" value="8"></div>
-                <div><input type="button" class = "num" name="nine" value="9"></div>
-                <div><input type="button" class = "spec" name="multiply" value="*"></div>
+                <div><input type="button" class = "num" name="seven" value="7" onclick="getNum(7)"></div>
+                <div><input type="button" class = "num" name="eight" value="8" onclick="getNum(8)"></div>
+                <div><input type="button" class = "num" name="nine" value="9" onclick="getNum(9)"></div>
+                <div><input type="button" class = "spec" name="multiply" value="*" onclick="getOp('*')"></div>
             </div>
             <div class="row3">
-                <div><input type="button" class = "num" name="four" value="4"></div>
-                <div><input type="button" class = "num" name="five" value="5"></div>
-                <div><input type="button" class = "num" name="six" value="6"></div>
-                <div><input type="button" class = "spec" name="subtract" value="-"></div>
+                <div><input type="button" class = "num" name="four" value="4" onclick="getNum(4)"></div>
+                <div><input type="button" class = "num" name="five" value="5" onclick="getNum(5)"></div>
+                <div><input type="button" class = "num" name="six" value="6" onclick="getNum(6)"></div>
+                <div><input type="button" class = "spec" name="subtract" value="-" onclick="getOp('-')"></div>
             </div>
             <div class="row4">
-                <div><input type="button" class = "num" name="one" value="1"></div>
-                <div><input type="button" class = "num" name="two" value="2"></div>
-                <div><input type="button" class = "num" name="three" value="3"></div>
-                <div><input type="button" class = "spec" name="add" value="+"></div>
+                <div><input type="button" class = "num" name="one" value="1" onclick="getNum(1)"></div>
+                <div><input type="button" class = "num" name="two" value="2" onclick="getNum(2)"></div>
+                <div><input type="button" class = "num" name="three" value="3" onclick="getNum(3)"></div>
+                <div><input type="button" class = "spec" name="add" value="+"onclick="getOp('+')"></div>
             </div>
             <div class="row5">    
-                <div><input type="button" class = "num" name="zero" id = "zero" value="0"></div>
-                <div><input type="button" class = "num" name="decimal" value="."></div>
-                <div><input type = "button" class = "spec" name = "=" value = "=" onclick="calculate('')"></div>
+                <div><input type="button" class = "num" name="zero" id = "zero" value="0" onclick="getNum(0)"></div>
+                <div><input type="button" class = "num" name="decimal" value="." onclick="getNum('.')"></div>
+                <div><input type = "button" class = "spec" name = "=" value = "=" onclick="operate()"></div>
             </div>
 
         </div>
