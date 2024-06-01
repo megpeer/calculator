@@ -1,10 +1,11 @@
-// let currentDisplay = "0"; 
+const display = document.querySelector(".display")
+const display2 = document.querySelector(".display2")
+const operator = document.querySelector(".operator")
 
 function appendToDisplay(input) {
-    const display = document.querySelector(".display")
     display.textContent += input;
-   
 }
+
 
 function operate(num1, num2, operator) {
 if (operator = "+") {
@@ -19,9 +20,6 @@ if (operator = "x") {
 else num1 / num2
 }
 
-console.log(operate(1, 2, '+'))
-// clearDisplay()
-
-// makeNegative()
-
-// calculate()
+function clearDisplay() {
+    display.textContent = "";
+}

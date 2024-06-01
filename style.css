@@ -26,27 +26,22 @@ body {
     display: flex;
     justify-content: end;
     align-items: flex-end ;
+
+    
+    
+}
+
+#display {
     width: 100%;
     height:100px;
 
     border: none;
     margin: none;
     padding: none;
-    background-color: #EDEAE9;
-    
-    
-}
 
-.display {
-    padding: 10px;
+    background-color: #EDEAE9;
     font-size: 24px;
 }
-/* .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0;
-} */
 
 
 .row1 {
@@ -92,10 +87,11 @@ body {
 
 
 
-button {
-    flex: 1;
+input[type="button"] {   
     margin: 0;
     padding: 0;
+    width: 100px;
+    height: 100px;
     font-size: 20px;
     border: 1px solid #345057;
     cursor: pointer;
@@ -107,12 +103,26 @@ button {
     background-color: #889E91; 
 }
 
+.num:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+.num:active {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
 .spec {
     background-color:#345057;
     color: #3B7A6E;
+    font-size: 40px;
 }
+.spec:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+.spec:active {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
 #zero {
-    flex-basis: 102px;
+    width: 200px;
 
 }
 
