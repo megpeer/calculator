@@ -1,78 +1,105 @@
 
 const buttons = document.querySelectorAll('input[type="button"');
-
 const input = document.getElementById('display')
 
-
-
-  //1. get 1st number
-  //2. get operator
-  //3. get 2nd number
-  //4. calculate result
-  //5. reset display
-
-  let num1;
-  let num2;
-  let operator;
-  let step = 0;
-  let numArray = [];
-  let numArray2 = [];
-  let result = 0
+let num1 = '';
+let num2 = '';
+let operator = null;
+let step = 0;
+let displayCurrent = document.getElementById('num1')
+let displayPrevious = document.getElementById('num2')
+// let numArray = [];
+// let numArray2 = [];
+let result = 0;
 
 function getNum(num) {
-    if (step === 0 || step === 1){
-    numArray.push(num)
-    step = 1
-    num1 = Number(numArray.join(''))
-    input.value = num1
+    if (step === 2) {
+        clearDisplay();   
+    }
+
+
+    if (step === 0 ){
+    displayCurrent.append(num);
+
+    // num1 = Number(numArray.join(''));
+    // input.value = num1;
+    // console.log(num1, typeof(num1))
+    // return num1;
 
     }
-    else if (step === 2) {
-    numArray2.push(num)
-    num2 = Number(numArray2.join(''))
-    input.value = num2
+    else if (step === 1) {
     
-}
+
+    displayCurrent.append(num);
+
+
+
+    }
 }
 
 function getOp(op) {
-    step = 2
-    operator = op
+    if (step === 0){
+    step = 1;
+    operator = op;
+    num1 = document.querySelector('#num1').innerText;
+    displayPrevious.append(num1 + " " + operator);
+    displayCurrent.innerHTML = "";
+    
+    // displayPrevious.append(" " + operator);
+
+    // displayCurrent.append("");
+
+
+
+    }
+    else {
+        return false;
+    }
 }
 
 
 function operate(num1, num2, operator) {
+    step = 0
+    num1 = parseFloat(document.querySelector('#num1').innerText);
+    num2 = parseFloat(document.querySelector('#num2').innerText);
+    displayCurrent.innerHTML = "";
+    displayPrevious.innerHTML = "";
+
 if (operator === "+") {
-    num1 + num2
-    input.value = result
+    result = num1 + num2;
+    displayCurrent.append(result);
+    
 }
 if (operator ==="-") {
-    result = num1 - num2
-    input.value = result
+    result = num1 - num2;
+    displayCurrent.append(result);
 }
 if (operator === "*") {
-    result = num1 * num2
-    input.value = result
+    result = num1 * num2;
+    displayCurrent.append(result);
 }
-else result = num1 / num2 
-input.value = result
+else if (operator === "/") {
+    result = num1 / num2;
+    displayCurrent.append(result);
 }
-
+}
 
 
 
 function clearDisplay() {
  
-    input.value = 0;
+    displayCurrent.innerHTML = "";
+    displayPrevious.innerHTML = "";
+
     num1 = null;
     num2 = null;
     operator = null;
     step = 0;
-    numArray = [];
-    numArray2 = [];
+    // numArray = [];
+    // numArray2 = [];
     result = 0
 }
 
 function del() {
-    console.log("delete")
+    displayCurrent.slice(0, -1);
 }
