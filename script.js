@@ -26,8 +26,14 @@ function getNum(num) {
 }
 
 function decimalPressed() {
-        if (!displayCurrent.innerHTML.includes('.')) {
+        if (step === 0 && !displayCurrent.innerHTML.includes('.')) {
             displayCurrent.append('.')
+        }
+        if (step === 1 && !displayCurrent.innerHTML.includes('.')) {
+            displayCurrent.append('.')
+        }
+        else {
+            false
         }
 }
 
