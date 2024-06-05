@@ -1,6 +1,7 @@
 * {
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-family: 'Roboto', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 900;
     color: #345057;
 
     
@@ -15,7 +16,7 @@ body {
     
     width: 400px;
     height: 600px;
-    background-color: #CECCCF;
+    background-color: #EDEAE9;
     border: none;
     margin: 40px;
     padding: none;
@@ -35,18 +36,27 @@ body {
 
 }
 .numbersArea {
-    padding: 20px;
-    font-size: 24px;
-    text-align:end ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    
 }
 #num1 {
-    padding: 5px;
-    height: 22px;
+
+    margin: 0px 20px 10px;
+
+    height: 40px;
+    width: 300px;
 
 }
 #num2 {
-    padding: 5px;
-    height: 22px;
+    margin: 10px 20px 0px;
+    height: 40px;
+    width: 300px;
+
 
 }
 
@@ -98,7 +108,7 @@ input[type="button"] {
     padding: 0;
     width: 100px;
     height: 100px;
-    font-size: 20px;
+
     border: 1px solid #345057;
     cursor: pointer;
 
@@ -133,7 +143,7 @@ input[type="button"] {
 .spec {
     background-color:#345057;
     color: #3B7A6E;
-    font-size: 40px;
+
 }
 .spec:hover {
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
@@ -146,10 +156,10 @@ input[type="button"] {
     width: 200px;
 
 }
-
+/* 
 bg color #CECCCF
 screen colour #EDEAE9
 text color #345057
 number buttns #889E91
 special butns bg #345057
-special butns text #3B7A6E
+special butns text #3B7A6E */

@@ -20,7 +20,7 @@
         <div >
             <div class="row1">
                 <div><input type = "button" class = "num2" id = "zero" value = "AC" onclick = "clearDisplay()"></div>
-                <div><input type = "button" class = "num2" value = "delete" onclick="del()"></div>
+                <div><input type = "button" class = "num2" value = "C" onclick="del()"></div>
                 <div><input type = "button" class = "spec" value= "/" onclick="getOp('/')"></div>
             </div>
             <div class="row2">
@@ -44,7 +44,7 @@
             </div>
             <div class="row5">    
                 <div><input type="button" class = "num" id = "zero" value="0" onclick="getNum(0)"></div>
-                <div><input type="button" class = "num" id = "decimal" value="." onclick="getNum('.')"></div>
+                <div><input type="button" class = "num" id = "decimal" value="." onclick="decimalPressed()"></div>
                 <div><input type = "button" class = "spec" value = "=" onclick="operate(num1, num2, operator)"></div>
             </div>
 
